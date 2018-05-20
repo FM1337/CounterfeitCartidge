@@ -1,0 +1,143 @@
+---
+layout: default
+title: How I discovered this cart was a "counterfeit" Part 1
+permalink: /story/the-cartridge-is-counterfeit/part-1
+---
+
+<article>
+    <header>
+        <h2>How I discovered this cart was a "counterfeit" Part 1</h2>
+        <hr>
+    </header>
+    <h3>
+        Note
+    </h3>
+    <p>If you haven't read the first part (and I recommend you do), you can do so by <a
+            href="/story/obtaining-the-cartridge">clicking here</a></p>
+    <hr>
+    <section id="everything-seems-fine">
+        <header>
+            <h3>Everything seems fine...at first</h3>
+        </header>
+        <p>So, quoting one area in the previous part of the story</p>
+        <code>I got home booted it up and it worked fine. I could save and play the game without any issues that I could
+            see.</code>
+        <p>This part still remains true, there isn't any issues with playing through the game like normal:
+        <ul>
+            <li>Saving works fine</li>
+            <li>Gameplay is normal with no issues</li>
+            <li>The cartridge is recognized like a legit copy of Pokemon Diamond</li>
+            <li>The cartridge itself doesn't show any signs of being a counterfeit/bootleg</li>
+        </ul>
+        </p>
+        <p>If there were no issues with the game itself at all, why am I calling it a counterfeit?</p>
+    </section>
+    <section id="somethings-up">
+        <header>
+            <h3>Something doesn't seem right</h3>
+        </header>
+        <p>
+            Well, it's because I discovered issues with interacting with the cart because of lazyness. See I didn't want
+            to have to play
+            through Pokemon again just to transfer over Pokemon to the PokeBank so I decided to try importing a save
+            file from the internet
+            onto the cartridge.
+        </p>
+        <p>My first go to solution was <a href="https://github.com/BernardoGiordano/Checkpoint">CheckPoint</a> a save
+            manager utility created by bernardogiordano</p>
+        <p>
+            So, I grabbed a save file from GameFAQs, used the <a href="http://www.shunyweb.info/convert.php">Shunyweb
+            save converter</a>, and "injected" the save file onto the cartridge.
+            I booted up the game and... nothing, the old save file was still on the cart and nothing had changed.
+        </p>
+        <p>Having found this to be odd, I attempted to export the save file from the cartridge to the sd card on my 2DS,
+            and while it appeared to export the save file, in reality it had failed and just created a 0 byte file.</p>
+        <p>As CheckPoint not working, I decided to give <a href="https://github.com/TuxSH/TWLSaveTool">TWLSaveTool</a> a
+            go. The only problem was, when I attempted to boot it up with the cartridge in the slot, this would happen:
+        </p>
+        <img src="https://i.imgur.com/tSp3X62.png" alt="Luma3DS Crash screen" class="img-fluid">
+    </section>
+    <hr>
+    <section id="investigating-time">
+        <header>
+            <h3>Time to Investigate!</h3>
+        </header>
+        <p>With both CheckPoint and TWLSaveTool not working, I began to ask around and that's when I started talking
+            with a user named ❅FrozenFire❆ on discord.</p>
+        <p>We talked back and forth about the situation and I was asked if I could dump the ROM from the cartridge and
+            get the header information about it. I dumped it and here was the information I got from the ROM</p>
+        <pre class="pre-scrollable"><code>----------------------------------------
+Header Info for: POKEMON_D_ADAE01_05.nds
+----------------------------------------
+Internal Name   : POKEMON D
+Game Serial     : NTR-ADAE-USA
+Maker Code      : 01
+Publisher       : Nintendo
+Version         : 1.5 (05h)
+Secure Checksum : 6575 (BAD)
+Logo Checksum   : CF56 (OK)
+Header Checksum : CA37 (OK)
+File Size       : 512Mbit (67108864 bytes)
+Card Size       : 512Mbit (67108864 bytes) (09h)
+File CRC32      : 94980279
+----------------------------------------
+
+----------
+Language 1
+----------
+
+Pokémon Diamond
+Nintendo
+
+----------
+Language 2
+----------
+
+Pokémon Diamond
+Nintendo
+
+----------
+Language 3
+----------
+
+Pokémon Diamond
+Nintendo
+
+----------
+Language 4
+----------
+
+Pokémon Diamond
+Nintendo
+
+----------
+Language 5
+----------
+
+Pokémon Diamond
+Nintendo
+
+----------
+Language 6
+----------
+
+Pokémon Diamond
+Nintendo
+        </code></pre>
+        <img src="https://i.imgur.com/eHhMHE4.png" class="img-fluid" alt="image of dumped rom info">
+        <p>Frozen decided to grab the information from a well known dump of the game and the CRC32 was different between
+            both ROMs.</p>
+        <img src="https://i.imgur.com/KmQO6Dd.png" class="img-fluid" alt="image of internet rom info">
+    </section>
+    <hr>
+    <section id="out-of-ideas">
+        <header>
+            <h3>Out of ideas</h3>
+        </header>
+        <p>At this point Frozen was out of ideas, after suggesting an idea to use the flash cart to grab the save and
+            then upload it to the PC via ftp (which wouldn't work because the NDS only supports WEP), we had decided to
+            take a break from trying to figure the problem out, I thanked frozen and for a few months, that was all
+            there was to it.</p>
+    </section>
+</article>
+<p>To view the next part click <a href="/story/the-cartridge-is-counterfeit/part-2">here</a></p>
