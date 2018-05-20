@@ -47,7 +47,7 @@ I quickly updated my earlier graphic showing off the new information discovered
 ![result](https://i.imgur.com/2D2Ic0O.png)
 (sorry for the low quality picture, I lost the original copy)
 
-Then another kind user came along and dumped their Pokemon Diamond cartridge as well and here are the results for his dump
+Then another kind user named Griffin came along and dumped their Pokemon Diamond cartridge as well and here are the results for his dump
 ### Non-Trimmed
 ![non-trimmed](https://i.imgur.com/ns1XBTu.png)
 ### Trimmed

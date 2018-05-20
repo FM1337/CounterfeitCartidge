@@ -3,3 +3,145 @@ layout: default
 title: How I discovered this cart was a "counterfeit" Part 2
 permalink: /story/the-cartridge-is-counterfeit/part-2
 ---
+
+<article>
+    <header>
+        <h2>How I discovered this cart was a "counterfeit" Part 2</h2>
+        <hr>
+    </header>
+    <h3>
+        Note
+    </h3>
+    <p>If you haven't read part 1 yet, I strongly recommend you read it before reading this part, it will make a lot
+        more sense.</p>
+    <p><a href="/story/obtaining-the-cartridge/part-1">click here to read part 1</a></p>
+    <hr>
+    <section id="testing-again">
+        <header>
+            <h3>Getting back to testing</h3>
+        </header>
+        <p>After my testing had concluded, there wasn't really many updates made to the research. I was busy with school
+            and there wasn't
+            really anyone else that was having this issue that I could ask to continue testing, and by now the grace
+            period for returning
+            the cart on Amazon and getting a refund or an exchange was long gone.</p>
+        <p>But I finished the winter semester, had a week off before my work term started and I was bored, so I decided
+            to pick this up once again.
+        </p>
+        <p>At this point, I was still operating under the assumption that if the CRC32 Checksum was different from the
+            ROM dump on the internet, then the card was a counterfeit.</p>
+        <p>
+            I decided to re-dump the cart again, but this time grab the trimmed version along with the non-trimmed
+            version and check the CRC32s from the internet ROM and this was the result:
+        </p>
+        <figure class="figure">
+            <img src="https://i.imgur.com/tsWrvgR.png" alt="image with 3 rom dumps"
+                 class="figure-img img-fluid rounded">
+            <figcaption class="figure-caption">Note the red boxes means the information doesn't match, green means it
+                does match, and blue is just information
+            </figcaption>
+        </figure>
+        <p>I had also written up a bit about the situation on Discord</p>
+        <img src="https://i.imgur.com/iOLCZG2.png" class="img-fluid">
+        <p>If the image doesn't work, below is a transcript of what the text in the image said:</p>
+        <pre><code>bit concerning when the CRC32 doesn't match
+I mean I understand the trimmed version wouldn't match
+but the non-trimmed versions of the same revision and same country should have the same CRC32
+I can't find any references to my cart's crc32 version online
+while I have found references to the pirated version
+which leads me to believe one of three things
+1. My cart is a counterfeit
+2. Every cart's ROM has a different CRC32
+3. The revision or country of my ROM is incorrect
+1 and 3 would probably tie together
+and 2 is unlikely as hell
+This wouldn't be a problem if save exporters wouldn't freak out on my cart,
+but everytime I try, they either crash the console, or export a 0 byte save.
+and The one that exports the 0 byte save cannot restore any saves I bring in either
+            </code>
+        </pre>
+    </section>
+    <section id="getting-info-from-friends">
+        <header>
+            <h3>Getting more info from friends</h3>
+        </header>
+        <p>For some reason I was dead set on number 2 being wrong, I was proved wrong in the next few minutes by a user
+            named TrainBoy2019 on discord who was kind enough to dump his Pokemon diamond cartridge, here are
+            screenshots</p>
+        <div class="row">
+            <div class="col-md-6">
+                <figure class="figure">
+                    <img src="https://i.imgur.com/ztRS1hd.png" alt="non-trimmed ROM"
+                         class="figure-img img-fluid rounded">
+                    <figcaption class="figure-caption">Non-Trimmed ROM</figcaption>
+                </figure>
+            </div>
+            <div class="col-md-6">
+                <figure class="figure">
+                    <img src="https://i.imgur.com/cpLW24G.png" alt="image with 3 rom dumps"
+                         class="figure-img img-fluid rounded">
+                    <figcaption class="figure-caption">Trimmed ROM</figcaption>
+                </figure>
+            </div>
+        </div>
+        <p>I quickly updated my earlier graphic showing off the new information discovered</p>
+        <figure class="figure">
+            <img src="https://i.imgur.com/2D2Ic0O.png" alt="updated image with rom infos"
+                 class="figure-img img-fluid rounded">
+            <figcaption class="figure-caption">Sorry for the low quality picture, I lost the original copy</figcaption>
+        </figure>
+        <p>Then another kind user named Griffin came along and dumped their Pokemon Diamond cartridge as well and here
+            are the results for his dump</p>
+        <div class="row">
+            <div class="col-md-6">
+                <figure class="figure">
+                    <img src="https://i.imgur.com/ns1XBTu.png" alt="non-trimmed ROM"
+                         class="figure-img img-fluid rounded">
+                    <figcaption class="figure-caption">Non-Trimmed ROM</figcaption>
+                </figure>
+            </div>
+            <div class="col-md-6">
+                <figure class="figure">
+                    <img src="https://i.imgur.com/KmVpvny.png alt=" image with 3 rom dumps"
+                    class="figure-img img-fluid rounded">
+                    <figcaption class="figure-caption">Trimmed ROM</figcaption>
+                </figure>
+            </div>
+        </div>
+        <p>Right off the bat with these dumps you'll notice something interesting, while the CRC32 of the non-trimmed
+            roms don't seem to match, the CRC32 of the trimmed ROMS do match. Both trimmed ROMs have a CRC32 of
+            <b>F3B5338E</b> this meant that all ROMs of the game from the same region and revision will most likely have
+            a
+            different CRC32 if they aren't trimmed.
+        </p>
+        <p>Griffin and Train both confirmed their carts were legitimate, Griffin had got his copy of the game in 2007
+            and Train got his between 2011 and 2013.</p>
+    </section>
+    <hr>
+    <section id="bernardogiordanos-input">
+        <header>
+            <h3>Input from the CheckPoint Developer</h3>
+        </header>
+        <p>At this point, the creator of CheckPoint <a href="https://github.com/bernardogiordano">bernardogiordano</a>
+            chimes in with a bit of information/a suggestion</p>
+        <pre><code>I think that the SPI functions we use in Checkpoint and TWLSaveTool don't know what to do with your cart
+Check with FBI just to see</code></pre>
+        <p>So I decided to try his suggestion, and the results weren't pretty, I recorded a YouTube video with the
+            results which you can see below</p>
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/eCPS31rFThk?rel=0"
+                    allowfullscreen></iframe>
+        </div>
+    </section>
+    <hr>
+    <section id="conclusion-for-now">
+        <header>
+            <h3>The conclusion...for now</h3>
+        </header>
+        <p>And that my friends, is pretty much the conclusion of this story, there's no real happy ending to it just
+            yet, I haven't found any thing that works so far but I'm not giving up. If you wanna see what I've tried so
+            far you can do that by clicking ~~here~~ (Coming soon).
+        </p>
+        <p>Thanks for reading the story up till now and I hope in the future we'll find a solution.</p>
+    </section>
+</article>
