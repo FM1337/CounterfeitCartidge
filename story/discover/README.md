@@ -1,4 +1,4 @@
-# How I discovered this cart was a "counterfeit"
+# How I discovered this cart was a "counterfeit" Part 1
 (Side note if you haven't read the first part, you can do so by [clicking here](https://fm1337.github.io/CounterfeitCartidge/story/obtain/
 ))
 
@@ -99,3 +99,5 @@ Frozen decided to grab the information from a well known dump of the game and th
 ![Another screenshot with information](https://i.imgur.com/KmQO6Dd.png)
 
 At this point Frozen was out of ideas, after suggesting an idea to use the flash cart to grab the save and then upload it to the PC via ftp (which wouldn't work because the NDS only supports WEP), we had decided to take a break from trying to figure the problem out, I thanked frozen and for a few months, that was all there was to it.
+
+To view the next part click here
