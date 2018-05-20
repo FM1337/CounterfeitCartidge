@@ -1,0 +1,25 @@
+body{
+    background-image: url("/img/ep_naturalblack.png")
+}
+
+nav a {
+    color: white;
+}
+
+.jumbotron{
+    background-color: #e9ecef40;
+    margin-top: 1rem;
+}
+
+p, h1, h2, h3, h4, h5, li {
+    color: white;
+}
+
+pre{
+    background-color: #e9ecef40;
+    color: white;
+}
+
+nav {
+    background-color: #e9ecef40;
+}

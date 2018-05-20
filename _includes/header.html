@@ -5,6 +5,14 @@
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css"
           integrity="sha256-Md8eaeo67OiouuXAi8t/Xpd8t2+IaJezATVTWbZqSOw=" crossorigin="anonymous"/>
+    <!-- main.css -->
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!-- opengraph tags -->
+    <meta property="og:url"                content="{{site.base}}{{page.url}}" />
+    <meta property="og:type"               content="{{page.type}}" />
+    <meta property="og:title"              content="{{page.title}} &middot; {{site.name}}" />
+    <meta property="og:description"        content="{{page.description}}" />
 </head>
 <body>
 {% include nav.html %}
