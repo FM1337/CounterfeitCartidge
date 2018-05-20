@@ -55,3 +55,18 @@ Then another kind user came along and dumped their Pokemon Diamond cartridge as 
 
 Right off the bat with these dumps you'll notice something interesting, while the CRC32 of the non-trimmed roms don't seem to match, the CRC32 of the trimmed ROMS do match. Both trimmed ROMs have a CRC32 of **F3B5338E** this meant that all ROMs of the game from the same region and revision will most likely have a different CRC32 if they aren't trimmed.
 
+Griffin and Train both confirmed their carts were legit, Griffin had got his copy of the game in 2007 and Train got his between 2011 and 2013.
+
+At this point, the creator of CheckPoint [bernardogiordano](https://github.com/bernardogiordano) chimes in with a bit of information/a suggestion
+```
+I think that the SPI functions we use in Checkpoint and TWLSaveTool don't know what to do with your cart
+Check with FBI just to see
+```
+
+So I decided to try his suggestion, and the results weren't pretty, I recorded a YouTube video with the results which you can see by clicking the image below
+
+[![Video Thumbnail](http://img.youtube.com/vi/eCPS31rFThk/0.jpg)](http://www.youtube.com/watch?v=eCPS31rFThk)
+
+And that my friends, is pretty much the conclusion of this story, there's no real happy ending to it just yet, I haven't found any thing that works so far but I'm not giving up. If you wanna see what I've tried so far you can do that by clicking ~~here~~ (Coming soon).
+
+Thanks for reading the story up till now and I hope in the future we'll find a solution.
