@@ -27,7 +27,7 @@ I booted up the game and... nothing, the old save file was still on the cart and
 Having found this to be odd, I attempted to export the save file from the cartidge to the sd card on my 2DS, and while it appeared to export the save file, in reality it had failed and just created a 0 byte file.
 
 As CheckPoint not working, I decided to give [TWLSaveTool](https://github.com/TuxSH/TWLSaveTool) a go. The only problem was, when I attempted to boot it up with the cartidge in the slot, this would happen:
-![TWLSaveTool Crash](https://i.imgur.com/tSp3X62.png
+![TWLSaveTool Crash](https://i.imgur.com/tSp3X62.png)
 
 With both CheckPoint and TWLSaveTool not working, I began to ask around and that's when I started talking with a user named ❅FrozenFire❆ on discord.
 
