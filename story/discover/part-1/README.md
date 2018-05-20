@@ -1,7 +1,8 @@
 # How I discovered this cart was a "counterfeit" Part 1
-(Side note if you haven't read the first part, you can do so by [clicking here](https://fm1337.github.io/CounterfeitCartidge/story/obtain/
-))
+## Note
+If you haven't read the first part (and I recommend you do), you can do so by [clicking here](https://fm1337.github.io/CounterfeitCartidge/story/obtain/)
 
+---
 So, quoting one area in the previous part of the story
 ```
 I got home booted it up and it worked fine. I could save and play the game without any issues that I could see.
