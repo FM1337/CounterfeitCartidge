@@ -100,4 +100,4 @@ Frozen decided to grab the information from a well known dump of the game and th
 
 At this point Frozen was out of ideas, after suggesting an idea to use the flash cart to grab the save and then upload it to the PC via ftp (which wouldn't work because the NDS only supports WEP), we had decided to take a break from trying to figure the problem out, I thanked frozen and for a few months, that was all there was to it.
 
-To view the next part click here
+To view the next part ~~click here~~ Coming Soon
